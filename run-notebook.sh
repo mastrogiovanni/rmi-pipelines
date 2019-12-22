@@ -4,6 +4,7 @@ docker run -d \
 	--name rmi-notebook \
 	--rm \
 	--user "$(id -u $USER):$(id -g $USER)" \
+	-v ~/.kube/config:/home/jovyan/.kube/config \
 	-v $(pwd):/home/jovyan \
 	-v /usr/local/freesurfer:/usr/local/freesurfer \
 	-v /usr/local/fsl:/usr/local/fsl \
